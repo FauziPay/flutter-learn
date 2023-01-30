@@ -1,4 +1,3 @@
-// create Counter Event
 import 'dart:async';
 
 abstract class CounterEvent {}
@@ -7,7 +6,7 @@ class CounterIncrementEvent extends CounterEvent {}
 
 class CounterDecrementEvent extends CounterEvent {}
 
-class CounterBloc {
+class CounterBlocNonBloc {
   // state and initialozation value
   int _value = 0;
 
@@ -28,13 +27,15 @@ class CounterBloc {
     if (event is CounterIncrementEvent) {
       _value++;
     } else {
-      _value--;
+      if (_value != 0) {
+        _value--;
+      }
     }
 
     _stateSink.add(_value);
   }
 
-  CounterBloc() {
+  CounterBlocNonBloc() {
     _eventStream.listen(_mappingEventToState);
   }
 
