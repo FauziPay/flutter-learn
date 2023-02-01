@@ -1,4 +1,9 @@
 {
   "name": "Achmad Nur Fauzi",
-  "age": 24
+  "age": 24,
+  "hobby": [
+    "Coding",
+    "Basket",
+    "Baca"
+  ]
 }

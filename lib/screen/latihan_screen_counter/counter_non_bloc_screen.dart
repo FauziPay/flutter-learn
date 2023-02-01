@@ -1,7 +1,6 @@
 // ignore: file_names
 import 'package:flutter/material.dart';
-
-import '../bloc/counter_bloc_non_bloc.dart';
+import 'package:flutter_learn_parse/bloc/counter_bloc_non_bloc.dart';
 
 class CounterNonBloc extends StatefulWidget {
   const CounterNonBloc({super.key, required this.title});

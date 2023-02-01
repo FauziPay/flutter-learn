@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_learn_parse/bloc/bloc/product_bloc.dart';
+import 'package:flutter_learn_parse/bloc/bloc_product/product_bloc.dart';
 
 class ProductOverviewBlocScreen extends StatelessWidget {
   const ProductOverviewBlocScreen({super.key});

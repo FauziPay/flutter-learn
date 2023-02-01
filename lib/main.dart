@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_learn_parse/screen/fundamental_parsing_json_screen.dart';
+import 'package:flutter_learn_parse/screen/latihan_bloc_consumer/login_page.dart';
 
 void main() => runApp(const MyApp());
 
@@ -10,7 +10,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       home: Scaffold(
-        body: ParsingJsonScreen(),
+        body: LoginPageScreen(),
       ),
     );
   }

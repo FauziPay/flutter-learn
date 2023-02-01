@@ -2,6 +2,7 @@ import 'dart:convert';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_learn_parse/model/sample.dart';
 
 class ParsingJsonScreen extends StatelessWidget {
   const ParsingJsonScreen({super.key});
@@ -26,11 +27,16 @@ class ParsingJsonScreenBody extends StatefulWidget {
 }
 
 class _ParsingJsonScreenBodyState extends State<ParsingJsonScreenBody> {
+  Sample? result;
   // fake method for simulation
   Future _loadJsonSample() async {
     String jsonString = await rootBundle.loadString('assets/sample.json');
 
     final jsonData = jsonDecode(jsonString);
+    Sample sample = Sample.fromJson(jsonData);
+    setState(() {
+      result = sample;
+    });
   }
 
   @override
@@ -40,17 +46,19 @@ class _ParsingJsonScreenBodyState extends State<ParsingJsonScreenBody> {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           ElevatedButton(
-            onPressed: () {},
+            onPressed: () async {
+              _loadJsonSample();
+            },
             child: const Text("Read JSON Data"),
           ),
           const SizedBox(
             height: 12.0,
           ),
-          const Padding(
-            padding: EdgeInsets.all(16.0),
+          Padding(
+            padding: const EdgeInsets.all(16.0),
             child: Text(
-              "no data",
-              style: TextStyle(
+              '${result?.hobby}',
+              style: const TextStyle(
                 fontSize: 22.0,
               ),
             ),
