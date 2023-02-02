@@ -57,7 +57,7 @@ class _ParsingJsonScreenBodyState extends State<ParsingJsonScreenBody> {
           Padding(
             padding: const EdgeInsets.all(16.0),
             child: Text(
-              '${result?.hobby}',
+              '${result?.articles?.first}',
               style: const TextStyle(
                 fontSize: 22.0,
               ),

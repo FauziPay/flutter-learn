@@ -5,5 +5,37 @@
     "Coding",
     "Basket",
     "Baca"
-  ]
+  ],
+  "github": {
+    "username": "@FauziPayy",
+    "repositories": 2012,
+    "isGDE": true
+  },
+  "articles": [
+    {
+      "id":  1,
+      "title": "God Of War",
+      "subtitle": "that is movie"
+    },
+    {
+      "id":  2,
+      "title": "Harvest Moon",
+      "subtitle": "that is game"
+    },
+    {
+      "id":  3,
+      "title": "Avenger",
+      "subtitle": "that is hero"
+    }
+  ],
+  "contacts": {
+    "1": {
+      "name": "Johnson",
+      "contact": "1234567"
+    },
+    "2": {
+      "name": "Angela",
+      "contact": "78964"
+    }
+  }
 }
